@@ -1,10 +1,20 @@
-$functions = [
-    'local_plugin_for_telegram_get_user_by_custom_field' => [
-        'classname' => 'pugin_for_telegram\external\get_user_by_custom_field', 
+<?php
+$functions = array(
+    'get_user_by_field_tg' => array(
+        'classname' => 'get_user_by_field_tg_external', 
         'description' => 'Get user by custom or optional field',
         'type' => 'read',
         'ajax' => true,
-        'services' => [MOODLE_OFFICIAL_MOBILE_SERVICE,
-        ]
-    ]
-]
+        'classpath' => 'mod/telegram_get_user/externallib.php',
+    )
+);
+
+$services = array(
+    'telegram_get_user' => array(
+        'function' => array ('get_user_by_field_tg'),
+        'restrictedusers' => 0,
+        'enabled' => 1,
+    )
+)
+
+?>

@@ -3,4 +3,5 @@
  
 defined('MOODLE_INTERNAL') || die();
  
-$string['plugintitle'] = 'This is a complete template example of a local plugin';
+$string['pluginname'] = 'get_user_by_field_tg';
+$string['modulename'] = 'get_user_by_field_tg';
