@@ -5,12 +5,12 @@ $functions = array(
         'description' => 'Get user by custom or optional field',
         'type' => 'read',
         'ajax' => true,
-        'classpath' => 'mod/telegram_get_user/externallib.php',
+        'classpath' => 'mod/plugin_for_telegram/externallib.php',
     )
 );
 
 $services = array(
-    'telegram_get_user' => array(
+    'plugin_for_telegram' => array(
         'function' => array ('get_user_by_field_tg'),
         'restrictedusers' => 0,
         'enabled' => 1,

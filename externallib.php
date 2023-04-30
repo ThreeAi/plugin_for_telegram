@@ -26,7 +26,7 @@ class get_user_by_field_tg_external extends external_api {
         return new external_multiple_structure(self::user_returns());
     }
     
-    private static function user_returns($user = null) {
+    private static function user_returns($user) {
         $user_fields = array(
             'id' => new external_value(PARAM_INT, 'User ID'),
             'username' => new external_value(PARAM_TEXT, 'Username'),
