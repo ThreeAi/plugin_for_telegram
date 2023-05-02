@@ -5,7 +5,7 @@ $functions = array(
         'description' => 'Get user by custom or optional field',
         'type' => 'read',
         'ajax' => true,
-        'classpath' => 'local/plugin_for_telegram/externallib.php',
+        'classpath' => 'local/plugin_for_telegram/classes/external/externallib.php',
     )
 );
 
