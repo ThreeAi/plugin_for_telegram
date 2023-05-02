@@ -6,6 +6,7 @@ $functions = array(
         'type' => 'read',
         'ajax' => true,
         'classpath' => 'local/plugin_for_telegram/classes/external/externallib.php',
+        'methodname' => 'get_user_by_field_tg',
     )
 );
 
