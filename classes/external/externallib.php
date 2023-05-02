@@ -12,6 +12,7 @@ class get_user_by_field_tg_external extends external_api {
 
     public static function get_user_by_field_tg($username_tg) {
         global $DB;
+        $users = array();
         $users = $DB->get_records_list('user', 'WHERE skype = ?', $username_tg, 'id');
         if (!empty($users)) {
             $user = reset($users); 
@@ -23,7 +24,7 @@ class get_user_by_field_tg_external extends external_api {
 
 
     public static function get_user_by_field_tg_returns() {
-        return new external_multiple_structure(self::user_returns());
+        return new external_multiple_structure(self::user_returns($user));
     }
     
     private static function user_returns($user) {
